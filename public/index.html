@@ -279,13 +279,14 @@
                         <div>
                             <div class="text-3xl font-semibold text-[#FF6600]">${price}</div>
                             ${oldPrice}
-                        </div><br>
-                        <button onclick="event.stopImmediatePropagation(); addToCart('${product.id}', '${product.title.replace(/'/g, "\\'")}', '${price}')" 
+                        </div>
+                       
+                    </div>
+                     <button onclick="event.stopImmediatePropagation(); addToCart('${product.id}', '${product.title.replace(/'/g, "\\'")}', '${price}')" 
                                 class="bg-[#FF6600] text-white px-6 py-3 text-sm font-medium rounded-3xl flex items-center gap-2 hover:bg-[#FF8800]">
                             <i class="fa-solid fa-cart-plus"></i>
                             Add
                         </button>
-                    </div>
                 </div>`;
 
                 card.addEventListener('click', () => showProductDetail(product));
