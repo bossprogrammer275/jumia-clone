@@ -279,7 +279,7 @@
                         <div>
                             <div class="text-3xl font-semibold text-[#FF6600]">${price}</div>
                             ${oldPrice}
-                        </div>
+                        </div><br>
                         <button onclick="event.stopImmediatePropagation(); addToCart('${product.id}', '${product.title.replace(/'/g, "\\'")}', '${price}')" 
                                 class="bg-[#FF6600] text-white px-6 py-3 text-sm font-medium rounded-3xl flex items-center gap-2 hover:bg-[#FF8800]">
                             <i class="fa-solid fa-cart-plus"></i>
@@ -360,14 +360,10 @@
                                 class="btn-primary mt-10 w-full text-lg justify-center">
                             ADD TO CART
                         </button>
-
-                        <div class="mt-8 text-xs text-zinc-400 font-mono">
-                            Fetched full normalized data via <span class="text-[#FF6600]">GET /api/details?id=${product.id}</span>
-                        </div>
                     </div>
                 </div>`;
             } catch (e) {
-                content.innerHTML = `<div class="text-red-500 text-center py-12">Could not load extra details.<br>Showing basic info instead.</div>`;
+                content.innerHTML = ``;
             }
         }
 
